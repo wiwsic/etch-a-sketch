@@ -4,7 +4,7 @@ let main = document.querySelector('.main');
 let canvas = document.querySelector('.canvas');
 let input = document.querySelector('.inputNumber');
 let confirmBtn = document.querySelector('.confirm');
-let gridNumber = 16;
+let gridNumber = 32;
 let numberOfCells = gridNumber * gridNumber;
 
 // Calculate the width/height
@@ -26,11 +26,21 @@ for (let x = 0; x < numberOfCells; x++) {
     let newDiv = document.createElement('div');
     newDiv.style.width = `${widthDivX}px`;
     newDiv.style.height = `${heightDivY}px`;
-    newDiv.style.backgroundColor = 'red'
-    newDiv.style.border = 'solid 1px'
+    newDiv.classList.add('grid');
+    newDiv.style.backgroundColor = 'red';
+    newDiv.style.border = 'solid 1px';
     canvas.appendChild(newDiv);
 
+    // Set up a “hover” effect so that the grid divs change color when your mouse passes over them, 
+    // leaving a (pixelated) trail through your grid like a pen would.
+
+    newDiv.addEventListener('mousemove', (e) => {
+        newDiv.style.backgroundColor = 'black';
+    
+    })
+
 } 
+
 
 
 
