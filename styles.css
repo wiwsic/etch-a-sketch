@@ -15,7 +15,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-sizing: ;
+
+}
+
+.newgrid {
+
+    font-size: 20px;
 
 }
 
@@ -29,4 +34,7 @@ body {
     height: 1000px;
     background-color: white;
 
+
 }
+
+
